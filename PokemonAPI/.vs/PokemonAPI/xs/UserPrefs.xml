@@ -1,9 +1,7 @@
-﻿<Properties StartupConfiguration="{DDC19A1A-177B-4D0A-9681-F6787A20AF59}|Default">
-  <MonoDevelop.Ide.ItemProperties.PokemonAPI PreferredExecutionTarget="/Applications/Safari.app" />
+﻿<Properties>
   <MonoDevelop.Ide.Workbench ActiveDocument="Mappers/PokemonMapper.cs">
     <Files>
       <File FileName="Controllers/PokemonController.cs" Line="1" Column="1" />
-      <File FileName="swagger.json" />
       <File FileName="Startup.cs" />
       <File FileName="Program.cs" />
       <File FileName="Mappers/PokemonMapper.cs" Line="60" Column="10" />
@@ -17,13 +15,16 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PokemonAPI" expanded="True">
-            <Node name="PokemonAPI" expanded="True" selected="True" />
+            <Node name="PokemonAPI" selected="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>PokemonAPI.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

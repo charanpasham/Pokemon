@@ -1,7 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonAPI", "PokemonAPI.csproj", "{DDC19A1A-177B-4D0A-9681-F6787A20AF59}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonAPI", "PokemonAPI\PokemonAPI.csproj", "{DDC19A1A-177B-4D0A-9681-F6787A20AF59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonUI", "PokemonUI\PokemonUI.csproj", "{0DEEBF9F-EA78-4498-A61F-C621E1E7088F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +15,9 @@ Global
 		{DDC19A1A-177B-4D0A-9681-F6787A20AF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDC19A1A-177B-4D0A-9681-F6787A20AF59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDC19A1A-177B-4D0A-9681-F6787A20AF59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DEEBF9F-EA78-4498-A61F-C621E1E7088F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DEEBF9F-EA78-4498-A61F-C621E1E7088F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DEEBF9F-EA78-4498-A61F-C621E1E7088F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DEEBF9F-EA78-4498-A61F-C621E1E7088F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
