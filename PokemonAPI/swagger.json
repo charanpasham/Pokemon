@@ -1,0 +1,617 @@
+{
+  "x-generator": "NSwag v13.1.6.0 (NJsonSchema v10.0.28.0 (Newtonsoft.Json v11.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8001",
+  "schemes": [
+    "https"
+  ],
+  "produces": [
+    "text/plain",
+    "application/json",
+    "text/json"
+  ],
+  "paths": {
+    "/Pokemon/{id}": {
+      "get": {
+        "tags": [
+          "Pokemon"
+        ],
+        "operationId": "Pokemon_Get",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Pokemon"
+            }
+          }
+        }
+      }
+    },
+    "/Pokemon/PokemonList": {
+      "get": {
+        "tags": [
+          "Pokemon"
+        ],
+        "operationId": "Pokemon_PokemonList",
+        "parameters": [
+          {
+            "type": "integer",
+            "name": "offset",
+            "in": "query",
+            "format": "int32",
+            "x-nullable": false
+          },
+          {
+            "type": "integer",
+            "name": "limit",
+            "in": "query",
+            "format": "int32",
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/PokemonList"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Pokemon": {
+      "type": "object",
+      "required": [
+        "pokemonId",
+        "base_experience",
+        "height",
+        "id",
+        "is_default",
+        "order",
+        "weight"
+      ],
+      "properties": {
+        "pokemonId": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "abilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Ability"
+          }
+        },
+        "base_experience": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "forms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Form"
+          }
+        },
+        "game_indices": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/GameIndice"
+          }
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "held_items": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/HeldItem"
+          }
+        },
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "is_default": {
+          "type": "boolean"
+        },
+        "location_area_encounters": {
+          "type": "string"
+        },
+        "moves": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Move"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "order": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "species": {
+          "$ref": "#/definitions/Species"
+        },
+        "sprites": {
+          "$ref": "#/definitions/Sprites"
+        },
+        "stats": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Stat"
+          }
+        },
+        "types": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Type"
+          }
+        },
+        "weight": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "Ability": {
+      "type": "object",
+      "required": [
+        "id",
+        "is_hidden",
+        "slot"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "ability": {
+          "$ref": "#/definitions/Ability2"
+        },
+        "is_hidden": {
+          "type": "boolean"
+        },
+        "slot": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "Ability2": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "Form": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "GameIndice": {
+      "type": "object",
+      "required": [
+        "id",
+        "game_index"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "game_index": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "version": {
+          "$ref": "#/definitions/Version"
+        }
+      }
+    },
+    "Version": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "HeldItem": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "item": {
+          "$ref": "#/definitions/Item"
+        },
+        "version_details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VersionDetail"
+          }
+        }
+      }
+    },
+    "Item": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "VersionDetail": {
+      "type": "object",
+      "required": [
+        "id",
+        "rarity"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "rarity": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "version": {
+          "$ref": "#/definitions/Version2"
+        }
+      }
+    },
+    "Version2": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "Move": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "move": {
+          "$ref": "#/definitions/Move2"
+        },
+        "version_group_details": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/VersionGroupDetail"
+          }
+        }
+      }
+    },
+    "Move2": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "VersionGroupDetail": {
+      "type": "object",
+      "required": [
+        "id",
+        "level_learned_at"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "level_learned_at": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "move_learn_method": {
+          "$ref": "#/definitions/MoveLearnMethod"
+        },
+        "version_group": {
+          "$ref": "#/definitions/VersionGroup"
+        }
+      }
+    },
+    "MoveLearnMethod": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "VersionGroup": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "Species": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "Sprites": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "back_default": {
+          "type": "string"
+        },
+        "back_female": {
+          "type": "string"
+        },
+        "back_shiny": {
+          "type": "string"
+        },
+        "back_shiny_female": {
+          "type": "string"
+        },
+        "front_default": {
+          "type": "string"
+        },
+        "front_female": {
+          "type": "string"
+        },
+        "front_shiny": {
+          "type": "string"
+        },
+        "front_shiny_female": {
+          "type": "string"
+        }
+      }
+    },
+    "Stat": {
+      "type": "object",
+      "required": [
+        "id",
+        "base_stat",
+        "effort"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "base_stat": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "effort": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "stat": {
+          "$ref": "#/definitions/Stat2"
+        }
+      }
+    },
+    "Stat2": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "Type": {
+      "type": "object",
+      "required": [
+        "id",
+        "slot"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "slot": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "$ref": "#/definitions/Type2"
+        }
+      }
+    },
+    "Type2": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "PokemonList": {
+      "type": "object",
+      "required": [
+        "count"
+      ],
+      "properties": {
+        "count": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "next": {},
+        "previous": {
+          "type": "string"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Result"
+          }
+        }
+      }
+    },
+    "Result": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
