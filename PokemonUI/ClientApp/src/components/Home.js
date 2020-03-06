@@ -13,48 +13,30 @@ export class Home extends Component {
   componentDidMount(){
     var tempPokemon = [];
     const {pokemon} = this.state;
-    console.log(pokemon.length);
     if(pokemon.length === 0){
-      fetch("https://pokeapi.co/api/v2/pokemon?ffset=0&limit=1000", {method: "GET", headers: {
+      fetch("/api/pokemon/list/1/10", {method: "GET", headers: {
         'Content-Type': 'application/json',
       }})
       .then(response => response.json())
-        .then(data=> {
-            var result = data.results;
-            result.forEach(element => {
-              fetch(element.url)
-                .then(pokemon => pokemon.json())
-                .then(pokemon => {
-                  tempPokemon= [ ...tempPokemon, { sprites: pokemon.sprites.front_default, name: pokemon.name } ];
-                  //console.log(tempPokemon);
-                  this.setState({pokemon: tempPokemon});
-                });
-            });
-            console.log(tempPokemon);
-        });
+          .then(data => {
+          data.forEach(d => {
+                  tempPokemon = [
+                      ...tempPokemon, { sprites: d.sprites.front_default, name: d.name, pokemonId: d.pokemonId }
+                  ];
+                  this.setState({ pokemon: tempPokemon });
+              });
+      });
     }
-
-      
-      
-      //this.setState({ data }));    
   }
 
 
-  // this.setState((state, props) => (
-  //   {
-  //    pokemon: [ ...state.pokemon, { sprites: pokemon.sprites.front_default, name: pokemon.name }]
-  //   }
-
-  // ))
-
   render () {
     const { pokemon } = this.state;
-    console.log(pokemon);
     const pokemonList = pokemon && pokemon.map((element, index) => (
       <div style={{ padding: '1rem', margin: '1rem', border: '0.2rem solid pink' }}>
         <img src={element.sprites} alt='pokemon image' />
         <p>{element.name}</p>
-        <p>#{index+1}</p>
+        <p>#{element.pokemonId}</p>
       </div>
     ));
     return (
