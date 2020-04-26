@@ -1,31 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PrivateRepos\\Pokemon\\PokemonAPI\\PokemonAPI.csproj": {}
+    "/Users/spasham/Projects/Pokemon/PokemonAPI/PokemonAPI.csproj": {}
   },
   "projects": {
-    "C:\\PrivateRepos\\Pokemon\\PokemonAPI\\PokemonAPI.csproj": {
+    "/Users/spasham/Projects/Pokemon/PokemonAPI/PokemonAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PrivateRepos\\Pokemon\\PokemonAPI\\PokemonAPI.csproj",
+        "projectUniqueName": "/Users/spasham/Projects/Pokemon/PokemonAPI/PokemonAPI.csproj",
         "projectName": "PokemonAPI",
-        "projectPath": "C:\\PrivateRepos\\Pokemon\\PokemonAPI\\PokemonAPI.csproj",
-        "packagesPath": "C:\\Users\\cpasham\\.nuget\\packages\\",
-        "outputPath": "C:\\PrivateRepos\\Pokemon\\PokemonAPI\\obj\\",
+        "projectPath": "/Users/spasham/Projects/Pokemon/PokemonAPI/PokemonAPI.csproj",
+        "packagesPath": "/Users/spasham/.nuget/packages/",
+        "outputPath": "/Users/spasham/Projects/Pokemon/PokemonAPI/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\cpasham\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/spasham/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://nuget.rmgcom.local/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -89,16 +86,8 @@
               "version": "[3.0.1, 3.0.1]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.0.2, 3.0.2]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.0.0, 3.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.0.0, 3.0.0]"
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[3.0.1, 3.0.1]"
             }
           ],
           "frameworkReferences": {
@@ -109,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
         }
       }
     }
