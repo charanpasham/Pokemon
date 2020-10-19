@@ -17,7 +17,7 @@ namespace PokeClient
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.2.2.0 (NJsonSchema v10.1.4.0 (Newtonsoft.Json v12.0.0.0))")]
     public partial class PokemonClient
     {
-        private string _baseUrl = "https://localhost:44316";
+        private string _baseUrl = "https://localhost:8001";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
